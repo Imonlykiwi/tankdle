@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('reset.css');
+:root {
+    --main-bgc: #171717;
+    --secound-color: #3A3434;
+    --font-color: #FAF5E1;
+    --font-color2: #d8d1b4;
+    --main-width: 900px;
+}
+* {
+    font-family: 'Roboto Condensed', Arial,sans-serif;
+}
+.wrap {
+    min-height: 100vh;
+    background-color: var(--main-bgc);
+    display: grid;
+    place-items: center;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: 60%;
+}
+main {
+    width: var(--main-width);
+    height: 700px;
+    position: relative;
+    
+}
+.content {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+.top {
+    /* height: 60px; */
+    width: 100%;
+    text-align: center;
+}
+.wot-logo {
+    height: 120px;
+}
+.info-container {
+    border-radius: 10px;
+    padding: 15px;
+    border: 1px solid var(--secound-color);
+    width: 300px;
+    margin: 0 auto;
+}
+.info-container p {
+    color: var(--font-color);
+    font-size: 22px;
+}
+.guess-btn {
+    height: 60px;
+    width: 120px;
+    background-color: transparent;
+    cursor: pointer;
+    border: var(--font-color);
+    color: var(--font-color);
+    font-size: 33px;
+    border: 1px solid var(--font-color);
+    text-align: center;
+}
+.form__group {
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+    margin-right: 20px;
+}
+.form__field {
+    font-family: inherit;
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--font-color);
+    outline: 0;
+    font-size: 1.3rem;
+    color: var(--font-color);
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+}
+.form__field::placeholder {
+    color: transparent;
+}
+.form__field:placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+}
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--font-color2);
+}
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, var(--font-color), var(--font-color2));
+    border-image-slice: 1;
+}
+.form__field:focus ~ .form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    color: var(--font-color2);
+    font-weight: 700;
+}
+.input form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* table */
+
+.content {
+    margin-top: 40px;
+}
+.table-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 60px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    font-size: 18px;
+}
+.table-row div {
+    text-align: center;
+    color: var(--font-color);
+    overflow: hidden;
+}
+.table-row div:first-child, .table-row div:last-child {
+    border: 1px solid;
+}
+.table-row div:nth-child(2), .table-row div:nth-child(3), .table-row div:nth-child(4), .table-row div:nth-child(5) {
+    border-right: 1px solid;
+}
+.table-row div {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    border-color: var(--font-color);
+    line-height: 60px;
+}
+.table-header div {
+    font-weight: bold;
+    font-size: 22px;
+}
+.wrong {
+    background-color: red;
+}
+.good {
+    background-color: green;
+}
+.counter {
+    width: 60px;
+    width: 60px;
+    border: 1px solid var(--font-color);
+    color: var(--font-color);
+    font-size: 25px;
+    line-height: 60px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+/* modal */
+.won-modal {
+    height: 100vh;
+    width: 100VW;
+    position: fixed;
+    top: 0;
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    display: grid;
+    place-items: center;
+}
+.off {
+    display: none;
+    opacity: 0;
+}
+.modal-content {
+    width: 400px;
+    height: 300px;
+    transition: .5s;
+    opacity: 1;
+    background-color: var(--secound-color);
+    font-size: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.left, .right {
+    width: 50%;
+    height: 100%;
+}
+.left {
+    background-image: url(../assets/img/bgi.jpeg);
+    background-position: bottom center;
+    background-size: cover;
+}
+.right p {
+    color: var(--font-color);
+    font-size: 25px;
+    text-align: center;
+    padding: 20px;
+}
+.rotate-180 {
+    transform: rotate(180deg);
+}

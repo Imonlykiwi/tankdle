@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Czołgdle</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/img/czolgdle-logo.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="wrap">
+      <i class=" "></i>
+      <main>
+        <header class="top">
+          <img
+            src="./assets/img/wot-logo.webp"
+            alt="logo world of tanks"
+            class="wot-logo"
+          />
+          <div class="info-container">
+            <p>Guess today's Tank!</p>
+            <p>Type any tier 8 or higher tank.</p>
+          </div>
+        </header>
+
+        <section class="input">
+          <form>
+            <div class="form__group field">
+              <input
+                type="input"
+                class="form__field"
+                placeholder="guess"
+                name="guss"
+                id="guess"
+                required
+              />
+              <label for="guess" class="form__label">Name</label>
+            </div>
+            <button class="guess-btn">
+              <span>Enter</span>
+            </button>
+            <div class="counter">0</div>
+          </form>
+        </section>
+
+        <section class="content">
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Name</th>
+                <th scope="col">Tier</th>
+                <th scope="col">Type</th>
+                <th scope="col">Country</th>
+                <th scope="col">Damage</th>
+                <th scope="col">Reload</th>
+                <th scope="col">Health</th>
+              </tr>
+            </thead>
+            <tbody class="table-content"></tbody>
+          </table>
+        </section>
+      </main>
+    </div>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="winModal"
+      tabindex="-1"
+      aria-labelledby="winModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="winModalLabel">Gratulacje</h1>
+          </div>
+          <div class="modal-body">Chuj ci w dupe nic nie wygrałeś : ></div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <template id="template">
+      <tr class="template-container">
+        <td scope="row" class="list index"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+        <td class="list"></td>
+      </tr>
+    </template>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://kit.fontawesome.com/9860270a66.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+      integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/utils.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/background.js"></script>
+  </body>
+</html>
