@@ -82,7 +82,7 @@ tankBtn.addEventListener("click", (e) => {
       // Increment the counter for guessed tanks
       tableindex++;
       counter++;
-      counterDiv.querySelector('span').textContent = counter;
+      counterDiv.querySelector("span").textContent = counter;
 
       const templateContent = document.importNode(template.content, true);
       const templateList = templateContent.querySelectorAll(".list");
@@ -123,51 +123,32 @@ tankNameInput.addEventListener("input", function (e) {
 
     const tankNames = matchingTanks.map((tank) => tank.tankName);
 
-    if (tankNames.length < 1) return;
+    if (tankNames.length === 0) return;
 
-    function displayArrayIndices(array, list) {
-      array.forEach((element, index) => {
-        const icons = [
-          "../assets/img/icons/Ico_Heavy.png",
-          "../assets/img/icons/Ico_Medium.png",
-          "../assets/img/icons/Ico_Light.png",
-          "../assets/img/icons/Ico_TD.png",
-          "../assets/img/icons/Ico_SPG.png",
-          "../assets/img/icons/Question.png",
-        ];
+    //? Create a list of tanks suggestions based on the user input
+    tankNames.forEach((element, index) => {
+      const icons = {
+        "heavy tank": "../assets/img/icons/Ico_Heavy.png",
+        "medium tank": "../assets/img/icons/Ico_Medium.png",
+        "light tank": "../assets/img/icons/Ico_Light.png",
+        "tank destroyer": "../assets/img/icons/Ico_TD.png",
+        "self-propelled guns": "../assets/img/icons/Ico_SPG.png",
+        default: "../assets/img/icons/Question.png", //? Default value if the tank type does not match any case
+      };
+      const listItem = document.createElement("li");
+      const tank = matchingTanks[index];
 
-        const listItem = document.createElement("li");
-        const tank = matchingTanks[index];
-        const tankTypeComparison = tank.tankType;
+      listItem.innerHTML = `${index + 1}. ${element}  <img src="${
+        icons[tank.tankType] || icons.default
+      }" alt="tank type icon" class="tank-icon">`;
 
-        listItem.innerHTML = `${index + 1}. ${element}  <img src="${(() => {
-          switch (tankTypeComparison) {
-            case "heavy tank":
-              return icons[0];
-            case "medium tank":
-              return icons[1];
-            case "light tank":
-              return icons[2];
-            case "tank destroyer":
-              return icons[3];
-            case "self-propelled guns":
-              return icons[4];
-            default:
-              return icons[5]; // Default value if the tank type does not match any case
-          }
-        })()}" alt="tank type icon" class="tank-icon">`;
+      suggestions.querySelector(".suggestion-tanks").appendChild(listItem);
 
-        listItem.setAttribute("data-name", element);
-
-        list.querySelector(".suggestion-tanks").appendChild(listItem);
-
-        listItem.addEventListener("click", function () {
-          tankNameInput.value = element;
-        });
+      listItem.addEventListener("click", function () {
+        tankNameInput.value = element;
       });
-    }
+    });
 
-    displayArrayIndices(tankNames, suggestions);
     suggestions.classList.add("active");
     dropDownFlag = true;
   } else {
