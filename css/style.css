@@ -114,6 +114,36 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow-y: visible;
+}
+.suggestion {
+    position: absolute;
+    width: 450px;
+    height: 0;
+    bottom: -100px;
+    left: 0;
+    display: none;
+}
+.suggestion.active {
+    height: 100px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+.suggestion ul {
+    width: 450px;
+    background-color: var(--main-bgc);
+    border: 1px solid var(--font-color);
+    border-radius: 0 0 8px 8px;
+    padding-bottom: 8px;
+    padding-top: 8px;
+}
+.suggestion li {
+    list-style-type: none;
+    color: var(--font-color);
+    cursor: pointer;
 }
 /* table */
 
@@ -212,9 +242,12 @@ main {
 .rotate-180 {
     transform: rotate(180deg);
 }
-#winModal {
+.modal-content {
     background-image: url(../assets/img/capybara.jpeg);
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+}
+.modal-content > div {
+    color: var(--font-color);
 }
