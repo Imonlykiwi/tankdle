@@ -31,7 +31,7 @@ fetch("../assets/data/tanks-list.json")
       });
     }
     randomTank = getRandomTank(tanks);
-    console.log(randomTank);
+    // console.log(randomTank);
   })
   .catch((error) => {
     console.error("Błąd wczytywania danych z pliku JSON:", error);
@@ -48,7 +48,7 @@ const addArrowToCell = (cell, status1, status2) => {
 };
 
 const createTankRow = (templateList, templateContent, tank, tableindex) => {
-  console.log(templateList);
+  // console.log(templateList);
   templateList[0].textContent = tableindex;
   templateList[1].textContent = tank.tankName;
   templateList[2].textContent = tank.tankTier;
@@ -119,19 +119,25 @@ tankNameInput.addEventListener("input", function (e) {
     function displayArrayIndices(array, list) {
       array.forEach((element, index) => {
         const icons = [
-          "../assets/icons/Ico_Heavy.png",
-          "../assets/icons/Ico_Medium.png",
-          "../assets/icons/Ico_Light.png",
-          "../assets/icons/Ico_TD.png",
-          "../assets/icons/Ico_SPG.png",
-          "../assets/icons/Ico_",
+          "../assets/img/icons/Ico_Heavy.png",
+          "../assets/img/icons/Ico_Medium.png",
+          "../assets/img/icons/Ico_Light.png",
+          "../assets/img/icons/Ico_TD.png",
+          "../assets/img/icons/Ico_SPG.png",
+          "../assets/img/icons/Question.png",
         ];
-        const listItem = document.createElement("li");
-        const tank = matchingTanks[index]; // Find the corresponding element in the "tanks" array
-        const tankTypeComparison = tank.tankType; // Assign the tank type to the variable
 
-        listItem.innerHTML = `${index + 1}. ${element} -  <img src="
-        ${(() => {
+        // Create a new list item element
+        const listItem = document.createElement("li");
+
+        // Find the corresponding element in the "tanks" array
+        const tank = matchingTanks[index];
+
+        // Assign the tank type to the variable
+        const tankTypeComparison = tank.tankType;
+
+        // Create the HTML content for the list item
+        listItem.innerHTML = `${index + 1}. ${element}  <img src="${(() => {
           switch (tankTypeComparison) {
             case "heavy tank":
               return icons[0];
@@ -144,18 +150,27 @@ tankNameInput.addEventListener("input", function (e) {
             case "self-propelled guns":
               return icons[4];
             default:
-              return ""; // Default value if the tank type does not match any caseu
+              return icons[5]; // Default value if the tank type does not match any case
           }
-        })()}
-        " alt="tank type icon">`;
+        })()}" alt="tank type icon" class="tank-icon">`;
 
+        // Set a "data-name" attribute to store the element name
+        listItem.setAttribute("data-name", element);
+
+        // Append the list item to the suggestion list
         list.querySelector(".suggestion-tanks").appendChild(listItem);
+
+        // Add an event listener for the click event
+        listItem.addEventListener("click", function () {
+          // console.log("Clicked on element: " + element, 'input value =', tankNameInput.value);
+          tankNameInput.value = element;
+          // Add your click event handling code here
+        });
       });
     }
 
     displayArrayIndices(tankNames, suggestions);
     suggestions.classList.add("active"); // Add the "active" class to "suggestions"
-    console.log(tankNames);
     dropDownFlag = true;
   } else {
     suggestions.classList.remove("active"); // Remove the "active" class if the input is not active
