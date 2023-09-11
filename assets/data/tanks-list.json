@@ -1,399 +1,399 @@
 [
-    {
-      "name": "Super Conqueror",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "heavy tank",
-        "dps": 400,
-        "crew": 4,
-        "hp": 2400
-      }
-    },
-    {
-      "name": "Centurion Action X",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "medium tank",
-        "dps": 390,
-        "baseReload": "7.67s",
-        "hp": 1950
-      }
-    },
-    {
-      "name": "Concept No. 5",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "medium tank",
-        "dps": 430,
-        "crew": 4,
-        "hp": 1800
-      }
-    },
-    {
-      "name": "Manticore",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "light tank",
-        "dps": 390,
-        "crew": 2,
-        "hp": 1400
-      }
-    },
-    {
-      "name": "FV217 Badger",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "tank destroyer",
-        "dps": 480,
-        "crew": 6,
-        "hp": 2100
-      }
-    },
-    {
-      "name": "FV4005 Stage II",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "tank destroyer",
-        "dps": 1150,
-        "crew": 5,
-        "hp": 1850
-      }
-    },
-    {
-      "name": "Conqueror G.C.",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "self-propelled guns",
-        "dps": 1000,
-        "crew": 6,
-        "hp": 530
-      }
-    },
-    {
-      "name": "T95/FV4201 Chieftain",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "heavy tank",
-        "dps": 440,
-        "crew": 4,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "FV215b",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "heavy tank",
-        "dps": 400,
-        "crew": 4,
-        "hp": 2500
-      }
-    },
-    {
-      "name": "FV215b 183",
-      "stats": {
-        "tier": "X",
-        "country": "Great Britain",
-        "type": "tank destroyer",
-        "dps": 1150,
-        "crew": 5,
-        "hp": 2000
-      }
-    },
-    {
-      "name": "G.W E 100",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "self-propelled guns",
-        "dps": 900,
-        "crew": 6,
-        "hp": 550
-      }
-    },
-    {
-      "name": "Jagdpanzer E 100",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "tank destroyer",
-        "dps": 1050,
-        "crew": 6,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "Grille 15",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "tank destroyer",
-        "dps": 750,
-        "crew": 6,
-        "hp": 1800
-      }
-    },
-    {
-      "name": "Pz.Kpfw. VII",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "heavy tank",
-        "dps": 560,
-        "crew": 5,
-        "hp": 2500
-      }
-    },
-    {
-      "name": "Maus",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "heavy tank",
-        "dps": 490,
-        "crew": 6,
-        "hp": 3000
-      }
-    },
-    {
-      "name": "E 100",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "heavy tank",
-        "dps": 750,
-        "crew": 6,
-        "hp": 2700
-      }
-    },
-    {
-      "name": "E 50 M",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "medium tank",
-        "dps": 390,
-        "crew": 5,
-        "hp": 2050
-      }
-    },
-    {
-      "name": "Leopard 1",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "medium tank",
-        "dps": 420,
-        "crew": 4,
-        "hp": 1850
-      }
-    },
-    {
-      "name": "Rheinmetal Panzerwagen",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "light tank",
-        "dps": 320,
-        "crew": 3,
-        "hp": 1600
-      }
-    },
-    {
-      "name": "VK 72.01 K",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "heavy tank",
-        "dps": 750,
-        "crew": 5,
-        "hp": 2500
-      }
-    },
-    {
-      "name": "Kpz. 07 P(E)",
-      "stats": {
-        "tier": "X",
-        "country": "Germany",
-        "type": "heavy tank",
-        "dps": 410,
-        "crew": 5,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "60TP Lewadowskiego",
-      "stats": {
-        "tier": "X",
-        "country": "Poland",
-        "type": "heavy tank",
-        "dps": 750,
-        "crew": 4,
-        "hp": 2600
-      }
-    },
-    {
-      "name": "CS-63",
-      "stats": {
-        "tier": "X",
-        "country": "Poland",
-        "type": "medium tank",
-        "dps": 390,
-        "crew": 4,
-        "hp": 2000
-      }
-    },
-    {
-      "name": "IS-7",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "heavy tank",
-        "dps": 440,
-        "crew": 4,
-        "hp": 2500
-      }
-    },
-    {
-      "name": "T-22 medium",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "medium tank",
-        "dps": 400,
-        "crew": 4,
-        "hp": 2000
-      }
-    },
-    {
-      "name": "Object 268 Version 4",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "tank destroyer",
-        "dps": 850,
-        "crew": 4,
-        "hp": 2300
-      }
-    },
-    {
-      "name": "Object 277",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "heavy tank",
-        "dps": 440,
-        "crew": 4,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "Object 260",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "heavy tank",
-        "dps": 490,
-        "crew": 4,
-        "hp": 2500
-      }
-    },
-    {
-      "name": "Object 430U",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "medium tank",
-        "dps": 400,
-        "crew": 4,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "Object 907",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "medium tank",
-        "dps": 420,
-        "crew": 4,
-        "hp": 2200
-      }
-    },
-    {
-      "name": "K-91",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "medium tank",
-        "dps": 400,
-        "crew": 4,
-        "hp": 2050
-      }
-    },
-    {
-      "name": "STB-1",
-      "stats": {
-        "tier": "X",
-        "country": "Japan",
-        "type": "medium tank",
-        "dps": 420,
-        "crew": 4,
-        "hp": 1900
-      }
-    },
-    {
-      "name": "Type 5 Heavy",
-      "stats": {
-        "tier": "X",
-        "country": "Japan",
-        "type": "heavy tank",
-        "dps": 500,
-        "crew": 5,
-        "hp": 2800
-      }
-    },
-    {
-      "name": "Type 5 Heavy",
-      "stats": {
-        "tier": "X",
-        "country": "Japan",
-        "type": "heavy tank",
-        "dps": 500,
-        "crew": 5,
-        "hp": 2800
-      }
-    },
-  
-    {
-      "name": "Ho-Ri 3",
-      "stats": {
-        "tier": "X",
-        "country": "Japan",
-        "type": "tank destroyer",
-        "dps": 700,
-        "crew": 6,
-        "hp": 2000
-      }
-    },
-    {
-      "name": "Obj. 279 (e)",
-      "stats": {
-        "tier": "X",
-        "country": "USSR",
-        "type": "heavy tank",
-        "dps": 490,
-        "crew": 4,
-        "hp": 2200
-      }
+  {
+    "name": "Super Conqueror",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "heavy tank",
+      "dps": 400,
+      "crew": 4,
+      "hp": 2400
     }
-  ]
+  },
+  {
+    "name": "Centurion Action X",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "medium tank",
+      "dps": 390,
+      "baseReload": "7.67s",
+      "hp": 1950
+    }
+  },
+  {
+    "name": "Concept No. 5",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "medium tank",
+      "dps": 430,
+      "crew": 4,
+      "hp": 1800
+    }
+  },
+  {
+    "name": "Manticore",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "light tank",
+      "dps": 390,
+      "crew": 2,
+      "hp": 1400
+    }
+  },
+  {
+    "name": "FV217 Badger",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "tank destroyer",
+      "dps": 480,
+      "crew": 6,
+      "hp": 2100
+    }
+  },
+  {
+    "name": "FV4005 Stage II",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "tank destroyer",
+      "dps": 1150,
+      "crew": 5,
+      "hp": 1850
+    }
+  },
+  {
+    "name": "Conqueror G.C.",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "self-propelled guns",
+      "dps": 1000,
+      "crew": 6,
+      "hp": 530
+    }
+  },
+  {
+    "name": "T95/FV4201 Chieftain",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "heavy tank",
+      "dps": 440,
+      "crew": 4,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "FV215b",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "heavy tank",
+      "dps": 400,
+      "crew": 4,
+      "hp": 2500
+    }
+  },
+  {
+    "name": "FV215b 183",
+    "stats": {
+      "tier": "X",
+      "country": "Great Britain",
+      "type": "tank destroyer",
+      "dps": 1150,
+      "crew": 5,
+      "hp": 2000
+    }
+  },
+  {
+    "name": "G.W E 100",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "self-propelled guns",
+      "dps": 900,
+      "crew": 6,
+      "hp": 550
+    }
+  },
+  {
+    "name": "Jagdpanzer E 100",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "tank destroyer",
+      "dps": 1050,
+      "crew": 6,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "Grille 15",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "tank destroyer",
+      "dps": 750,
+      "crew": 6,
+      "hp": 1800
+    }
+  },
+  {
+    "name": "Pz.Kpfw. VII",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "heavy tank",
+      "dps": 560,
+      "crew": 5,
+      "hp": 2500
+    }
+  },
+  {
+    "name": "Maus",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "heavy tank",
+      "dps": 490,
+      "crew": 6,
+      "hp": 3000
+    }
+  },
+  {
+    "name": "E 100",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "heavy tank",
+      "dps": 750,
+      "crew": 6,
+      "hp": 2700
+    }
+  },
+  {
+    "name": "E 50 M",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "medium tank",
+      "dps": 390,
+      "crew": 5,
+      "hp": 2050
+    }
+  },
+  {
+    "name": "Leopard 1",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "medium tank",
+      "dps": 420,
+      "crew": 4,
+      "hp": 1850
+    }
+  },
+  {
+    "name": "Rheinmetal Panzerwagen",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "light tank",
+      "dps": 320,
+      "crew": 3,
+      "hp": 1600
+    }
+  },
+  {
+    "name": "VK 72.01 K",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "heavy tank",
+      "dps": 750,
+      "crew": 5,
+      "hp": 2500
+    }
+  },
+  {
+    "name": "Kpz. 07 P(E)",
+    "stats": {
+      "tier": "X",
+      "country": "Germany",
+      "type": "heavy tank",
+      "dps": 410,
+      "crew": 5,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "60TP Lewadowskiego",
+    "stats": {
+      "tier": "X",
+      "country": "Poland",
+      "type": "heavy tank",
+      "dps": 750,
+      "crew": 4,
+      "hp": 2600
+    }
+  },
+  {
+    "name": "CS-63",
+    "stats": {
+      "tier": "X",
+      "country": "Poland",
+      "type": "medium tank",
+      "dps": 390,
+      "crew": 4,
+      "hp": 2000
+    }
+  },
+  {
+    "name": "IS-7",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "heavy tank",
+      "dps": 440,
+      "crew": 4,
+      "hp": 2500
+    }
+  },
+  {
+    "name": "T-22 medium",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "medium tank",
+      "dps": 400,
+      "crew": 4,
+      "hp": 2000
+    }
+  },
+  {
+    "name": "Object 268/4",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "tank destroyer",
+      "dps": 850,
+      "crew": 4,
+      "hp": 2300
+    }
+  },
+  {
+    "name": "Object 277",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "heavy tank",
+      "dps": 440,
+      "crew": 4,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "Object 260",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "heavy tank",
+      "dps": 490,
+      "crew": 4,
+      "hp": 2500
+    }
+  },
+  {
+    "name": "Object 430U",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "medium tank",
+      "dps": 400,
+      "crew": 4,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "Object 907",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "medium tank",
+      "dps": 420,
+      "crew": 4,
+      "hp": 2200
+    }
+  },
+  {
+    "name": "K-91",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "medium tank",
+      "dps": 400,
+      "crew": 4,
+      "hp": 2050
+    }
+  },
+  {
+    "name": "STB-1",
+    "stats": {
+      "tier": "X",
+      "country": "Japan",
+      "type": "medium tank",
+      "dps": 420,
+      "crew": 4,
+      "hp": 1900
+    }
+  },
+  {
+    "name": "Type 5 Heavy",
+    "stats": {
+      "tier": "X",
+      "country": "Japan",
+      "type": "heavy tank",
+      "dps": 500,
+      "crew": 5,
+      "hp": 2800
+    }
+  },
+  {
+    "name": "Type 5 Heavy",
+    "stats": {
+      "tier": "X",
+      "country": "Japan",
+      "type": "heavy tank",
+      "dps": 500,
+      "crew": 5,
+      "hp": 2800
+    }
+  },
+
+  {
+    "name": "Ho-Ri 3",
+    "stats": {
+      "tier": "X",
+      "country": "Japan",
+      "type": "tank destroyer",
+      "dps": 700,
+      "crew": 6,
+      "hp": 2000
+    }
+  },
+  {
+    "name": "Obj. 279 (e)",
+    "stats": {
+      "tier": "X",
+      "country": "USSR",
+      "type": "heavy tank",
+      "dps": 490,
+      "crew": 4,
+      "hp": 2200
+    }
+  }
+]
