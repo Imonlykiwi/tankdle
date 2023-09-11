@@ -82,7 +82,7 @@ tankBtn.addEventListener("click", (e) => {
       // Increment the counter for guessed tanks
       tableindex++;
       counter++;
-      counterDiv.textContent = counter;
+      counterDiv.querySelector('span').textContent = counter;
 
       const templateContent = document.importNode(template.content, true);
       const templateList = templateContent.querySelectorAll(".list");

@@ -324,9 +324,9 @@
       "tier": "X",
       "country": "USSR",
       "type": "medium tank",
-      "dps": 420,
+      "dps": 320,
       "crew": 4,
-      "hp": 2200
+      "hp": 2000
     }
   },
   {
@@ -335,9 +335,9 @@
       "tier": "X",
       "country": "USSR",
       "type": "medium tank",
-      "dps": 400,
+      "dps": 320,
       "crew": 4,
-      "hp": 2050
+      "hp": 1950
     }
   },
   {
@@ -346,9 +346,9 @@
       "tier": "X",
       "country": "Japan",
       "type": "medium tank",
-      "dps": 420,
+      "dps": 360,
       "crew": 4,
-      "hp": 1900
+      "hp": 2000
     }
   },
   {
@@ -357,23 +357,11 @@
       "tier": "X",
       "country": "Japan",
       "type": "heavy tank",
-      "dps": 500,
+      "dps": 600,
       "crew": 5,
       "hp": 2800
     }
   },
-  {
-    "name": "Type 5 Heavy",
-    "stats": {
-      "tier": "X",
-      "country": "Japan",
-      "type": "heavy tank",
-      "dps": 500,
-      "crew": 5,
-      "hp": 2800
-    }
-  },
-
   {
     "name": "Ho-Ri 3",
     "stats": {
@@ -391,9 +379,9 @@
       "tier": "X",
       "country": "USSR",
       "type": "heavy tank",
-      "dps": 490,
+      "dps": 440,
       "crew": 4,
-      "hp": 2200
+      "hp": 2300
     }
   }
 ]

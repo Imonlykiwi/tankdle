@@ -194,6 +194,15 @@ main {
     line-height: 60px;
     text-align: center;
     margin-left: 10px;
+    position: relative;
+}
+.counter-info {
+    display: none;
+    position: absolute;
+    height: 55px;
+    color: inherit;
+    left: 0;
+    top: -55px;
 }
 
 /* modal */
