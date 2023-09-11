@@ -23,5 +23,3 @@ Jeśli masz pytania lub chciałbyś podzielić się swoimi pomysłami na rozwija
 ## Autor
 
 Ten projekt został stworzony przez [ImOnlyKiwi](https://github.com/ImOnlyKiwi).
-
-## Licencja
