@@ -1,5 +1,6 @@
 "use strict";
 
+// Get references to various elements in the HTML
 const template = document.querySelector("#template");
 const counterDiv = document.querySelector(".counter");
 const tankNameInput = document.querySelector(".form__field");
@@ -9,15 +10,18 @@ const tableBody = document.querySelector(".table-content");
 const suggestions = document.querySelector(".suggestion");
 const modal = new bootstrap.Modal(document.querySelector("#winModal"));
 
+// Initialize variables
 let counter = 0;
 let randomTank = null;
 let tanks = [];
 let tableindex = 0;
 let dropDownFlag = false;
 
+// Fetch tank data from a JSON file
 fetch("../assets/data/tanks-list.json")
   .then((response) => response.json())
   .then((data) => {
+    // Parse the JSON data and populate the "tanks" array
     for (const tankKey in data) {
       const tank = data[tankKey];
       tanks.push({
@@ -30,13 +34,15 @@ fetch("../assets/data/tanks-list.json")
         tankHP: tank.stats.hp,
       });
     }
+    // Select a random tank from the "tanks" array
     randomTank = getRandomTank(tanks);
     // console.log(randomTank);
   })
   .catch((error) => {
-    console.error("Błąd wczytywania danych z pliku JSON:", error);
+    console.error("Error loading data from JSON file:", error);
   });
 
+// Function to add an arrow icon to a table cell based on values
 const addArrowToCell = (cell, status1, status2) => {
   const arrow = document.createElement("i");
   arrow.classList.add("fa-solid", "fa-arrow-down");
@@ -47,8 +53,8 @@ const addArrowToCell = (cell, status1, status2) => {
   cell.appendChild(arrow);
 };
 
+// Function to create a row for a tank in the table
 const createTankRow = (templateList, templateContent, tank, tableindex) => {
-  // console.log(templateList);
   templateList[0].textContent = tableindex;
   templateList[1].textContent = tank.tankName;
   templateList[2].textContent = tank.tankTier;
@@ -61,6 +67,7 @@ const createTankRow = (templateList, templateContent, tank, tableindex) => {
   tableBody.appendChild(templateContent);
 };
 
+// Event listener for the tank guessing button
 tankBtn.addEventListener("click", (e) => {
   e.preventDefault();
 
@@ -72,7 +79,7 @@ tankBtn.addEventListener("click", (e) => {
 
   tanks.forEach((tank) => {
     if (tank.tankName.toLowerCase() === guessedName.toLowerCase()) {
-      //? increments counter for guessed tanks
+      // Increment the counter for guessed tanks
       tableindex++;
       counter++;
       counterDiv.textContent = counter;
@@ -97,11 +104,13 @@ tankBtn.addEventListener("click", (e) => {
   });
 });
 
+// Function to block user input and display a modal
 const blockInput = (input) => {
   input.disabled = true;
   modal.toggle();
 };
 
+// Event listener for input changes in the tank name input field
 tankNameInput.addEventListener("input", function (e) {
   const tankNameSearch = e.target.value.toLowerCase();
   suggestions.classList.remove("active");
@@ -127,16 +136,10 @@ tankNameInput.addEventListener("input", function (e) {
           "../assets/img/icons/Question.png",
         ];
 
-        // Create a new list item element
         const listItem = document.createElement("li");
-
-        // Find the corresponding element in the "tanks" array
         const tank = matchingTanks[index];
-
-        // Assign the tank type to the variable
         const tankTypeComparison = tank.tankType;
 
-        // Create the HTML content for the list item
         listItem.innerHTML = `${index + 1}. ${element}  <img src="${(() => {
           switch (tankTypeComparison) {
             case "heavy tank":
@@ -154,26 +157,21 @@ tankNameInput.addEventListener("input", function (e) {
           }
         })()}" alt="tank type icon" class="tank-icon">`;
 
-        // Set a "data-name" attribute to store the element name
         listItem.setAttribute("data-name", element);
 
-        // Append the list item to the suggestion list
         list.querySelector(".suggestion-tanks").appendChild(listItem);
 
-        // Add an event listener for the click event
         listItem.addEventListener("click", function () {
-          // console.log("Clicked on element: " + element, 'input value =', tankNameInput.value);
           tankNameInput.value = element;
-          // Add your click event handling code here
         });
       });
     }
 
     displayArrayIndices(tankNames, suggestions);
-    suggestions.classList.add("active"); // Add the "active" class to "suggestions"
+    suggestions.classList.add("active");
     dropDownFlag = true;
   } else {
-    suggestions.classList.remove("active"); // Remove the "active" class if the input is not active
+    suggestions.classList.remove("active");
     dropDownFlag = false;
     return;
   }
@@ -183,6 +181,6 @@ tankNameInput.addEventListener("input", function (e) {
 window.onclick = function (event) {
   if (!event.target.matches("section.input") && dropDownFlag) {
     suggestions.classList.remove("active");
-    !dropDownFlag;
+    dropDownFlag = false;
   }
 };
