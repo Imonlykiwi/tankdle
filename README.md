@@ -4,7 +4,7 @@ Witaj w projekcie "Guess the Tank"! To interaktywna strona internetowa, która p
 
 ## Wersja
 
-Aktualna wersja projektu: **v1.0**
+Aktualna wersja projektu: **v1.1**
 
 ## Jak zacząć
 
