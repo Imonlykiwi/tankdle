@@ -47,9 +47,13 @@ const addArrowToCell = (cell, status1, status2) => {
   const arrow = document.createElement("i");
   arrow.classList.add("fa-solid", "fa-arrow-down");
   arrow.style.marginLeft = "8px";
-  if (status1 < status2) {
-    arrow.classList.add("rotate-180");
+  if (!containsRomanNumber(status1)) {
+    (status1 < status2) && arrow.classList.add("rotate-180");
+  } else {
+    (romanToArabic(status1) < romanToArabic(status2)) && arrow.classList.add("rotate-180");
+    // console.log(romanToArabic(status1), romanToArabic(status2));
   }
+  
   cell.appendChild(arrow);
 };
 

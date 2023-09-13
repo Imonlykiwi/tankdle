@@ -383,5 +383,17 @@
       "crew": 4,
       "hp": 2300
     }
+  },
+
+  {
+    "name": "CS-52 LIS",
+    "stats": {
+      "tier": "VIII",
+      "country": "Poland",
+      "type": "medium tank",
+      "dps": 320,
+      "crew": 4,
+      "hp": 1410
+    }
   }
 ]
