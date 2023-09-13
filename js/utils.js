@@ -65,36 +65,28 @@ const checkTank = (name, tier, type, country, dps, crew, hp, list) => {
 
 //? convert roman number to arabic
 function romanToArabic(roman) {
-  const romanNumbers = {
-    I: 1,
-    V: 5,
-    X: 10,
+  const romanNumerals = {
+    "I": 1,
+    "II": 2,
+    "III": 3,
+    "IV": 4,
+    "V": 5,
+    "VI": 6,
+    "VII": 7,
+    "VIII": 8,
+    "IX": 9,
+    "X": 10,
+    "default": 0,
   };
 
-  let result = 0;
-
-  for (let i = 0; i < roman.length; i++) {
-    const currentRomanNumber = roman[i];
-    const currentArabicValue = romanNumbers[currentRomanNumber];
-    const nextRomanNumber = roman[i + 1];
-    const nextArabicValue = romanNumbers[nextRomanNumber];
-
-    if (nextArabicValue > currentArabicValue) {
-      result += nextArabicValue - currentArabicValue;
-      i++; // Skip the next numeral since it has already been accounted for.
-    } else {
-      result += currentArabicValue;
-    }
-  }
-
-  return result;
+  return romanNumerals[roman] ?? romanNumerals.default;
 }
 
 //?  checks if a given string contains a Roman numeral from 1 to 10
 function containsRomanNumber(str) {
   // Create a regular expression to match Roman numerals from 1 to 10
   const romanPattern = /^(X|IX|IV|V?I{0,3})$/;
-  
+
   // Check if the string matches the pattern
   return romanPattern.test(str);
 }
