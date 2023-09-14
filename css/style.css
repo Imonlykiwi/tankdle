@@ -5,6 +5,7 @@
     --secound-color: #3A3434;
     --font-color: #FAF5E1;
     --font-color2: #d8d1b4;
+    --golden: #ede219;
     --main-width: 900px;
 }
 * {
@@ -225,7 +226,7 @@ main {
     height: 300px;
     transition: .5s;
     opacity: 1;
-    background-color: var(--secound-color);
+    background-color: var(--secound-color) !important;
     font-size: 30px;
     border-radius: 10px;
     display: flex;
@@ -250,12 +251,6 @@ main {
 }
 .rotate-180 {
     transform: rotate(180deg);
-}
-.modal-content {
-    background-image: url(../assets/img/capybara.jpeg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .modal-content > div {
     color: var(--font-color);

@@ -8,6 +8,8 @@ const tankBtn = document.querySelector(".guess-btn");
 const table = document.querySelector(".content");
 const tableBody = document.querySelector(".table-content");
 const suggestions = document.querySelector(".suggestion");
+const modalBody = document.querySelector(".modal-body");
+const modalStars = document.querySelector(".modal-stars");
 const modal = new bootstrap.Modal(document.querySelector("#winModal"));
 
 // Initialize variables
@@ -16,6 +18,8 @@ let randomTank = null;
 let tanks = [];
 let tableindex = 0;
 let dropDownFlag = false;
+let timer = 0;
+let timerInterval;
 
 // Fetch tank data from a JSON file
 fetch("../assets/data/tanks-list.json")
@@ -86,6 +90,9 @@ tankBtn.addEventListener("click", (e) => {
       // Increment the counter for guessed tanks
       tableindex++;
       counter++;
+      if (counter === 10) {
+        blockInput(tankNameInput, false);
+      }
       counterDiv.querySelector("span").textContent = counter;
 
       const templateContent = document.importNode(template.content, true);
@@ -109,13 +116,17 @@ tankBtn.addEventListener("click", (e) => {
 });
 
 // Function to block user input and display a modal
-const blockInput = (input) => {
+const blockInput = (input, res = true) => {
   input.disabled = true;
+  (res) ? modalBody.textContent = 'Wygrałeś!' : modalBody.textContent = 'Przegraleś!';
+  console.log(res);
   modal.toggle();
+  stopTimerOnEvent();
 };
 
 // Event listener for input changes in the tank name input field
 tankNameInput.addEventListener("input", function (e) {
+  startTimerOnEvent(); //start timer
   const tankNameSearch = e.target.value.toLowerCase();
   suggestions.classList.remove("active");
   suggestions.querySelector(".suggestion-tanks").textContent = "";
@@ -167,5 +178,6 @@ window.onclick = function (event) {
   if (!event.target.matches("section.input") && dropDownFlag) {
     suggestions.classList.remove("active");
     dropDownFlag = false;
+    // console.log(dropDownFlag);
   }
 };
