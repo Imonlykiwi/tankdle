@@ -1,4 +1,4 @@
-//? The logic responsible for converting the result
+//? The logic responsible for calculating and displaying the result
 class Result {
   constructor(timer, counter, element) {
     this.timer = timer;
@@ -7,7 +7,10 @@ class Result {
   }
 
   getResult() {
+    // Calculate the final result based on timer and counter values
     const finalResult = this.calculateFinalResult();
+
+    // Map final result to the number of stars to display
     const starMap = new Map([
       [-2, 6],
       [-1, 5],
@@ -21,25 +24,32 @@ class Result {
       [7, 3],
       [8, 2],
       [9, 2],
-      [10, 1]
+      [10, 1],
     ]);
 
     const stars = starMap.get(finalResult) || 0;
+
+    // Display the result by opening a modal and showing stars
     this.openModal(stars);
 
+    // Debugging logs (commented out)
     // console.log(`result: ${finalResult}`);
     // console.log(`stars: ${stars} ${stars === 1 ? 'star' : 'stars'}`);
   }
-  
+
   calculateFinalResult(result = 0) {
+    // Calculate the final result based on timer and counter values
     if (this.timer <= 400) {
       result -= 2;
     } else if (this.timer <= 800 && this.timer > 400) {
       result -= 1;
     }
+
     if (this.counter <= 3) {
       return result;
     }
+
+    // Adjust the result based on the counter value
     switch (this.counter) {
       case 4:
         result += 1;
@@ -53,34 +63,35 @@ class Result {
       case 7:
         result += 6;
         break;
-      case 8: 
-        result +=8
+      case 8:
+        result += 8;
         break;
-      default: 
+      default:
         result += 10;
     }
+
     return result;
   }
 
   openModal(stars) {
-    // Create stars based on the count and add them to the element
-    const starElement = document.createElement('i');
-    starElement.classList.add('fa-solid', 'fa-star');
-    starElement.style.color = '#ede219'; // Set the color to #ede219
-    
-    const emptyStarElement = document.createElement('i');
-    emptyStarElement.classList.add('fa-light', 'fa-star');
-    emptyStarElement.style.color = '#ede219'; // Set the color to #ede219
-    
+    // Create stars based on the count and add them to the specified element
+    const starElement = document.createElement("i");
+    starElement.classList.add("fa-solid", "fa-star");
+    starElement.style.color = "#ede219"; // Set the color to #ede219
+
+    const emptyStarElement = document.createElement("i");
+    emptyStarElement.classList.add("fa-light", "fa-star");
+    emptyStarElement.style.color = "#ede219"; // Set the color to #ede219
+
     for (let i = 0; i < stars; i++) {
       this.element.appendChild(starElement.cloneNode(true));
     }
-    
+
+    // Fill the remaining star slots with empty stars
     for (let i = stars; i < 5; i++) {
       this.element.appendChild(emptyStarElement.cloneNode(true));
     }
   }
-
 }
 
 /**
