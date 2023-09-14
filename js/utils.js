@@ -1,16 +1,59 @@
 //? The logic responsible for calculating and displaying the result
 class Result {
+  // Constructor for the Result class that takes a timer, counter, and element as arguments.
   constructor(timer, counter, element) {
-    this.timer = timer;
-    this.counter = counter;
-    this.element = element;
+    this.timer = timer;     // Initialize timer property.
+    this.counter = counter; // Initialize counter property.
+    this.element = element; // Initialize element property.
   }
 
+  // Method to calculate and display the result.
   getResult() {
-    // Calculate the final result based on timer and counter values
-    const finalResult = this.calculateFinalResult();
+    const finalResult = this.calculateFinalResult(); // Calculate the final result.
+    const stars = this.calculateStars(finalResult);   // Calculate the star rating.
 
-    // Map final result to the number of stars to display
+    this.openModal(stars); // Display the result using a modal.
+  }
+
+  // Method to calculate the final result based on timer and counter values.
+  calculateFinalResult() {
+    let result = 0;
+
+    // Calculate the result based on the timer value.
+    if (this.timer <= 400) {
+      result -= 2; // If timer is less than or equal to 400, subtract 2 from the result.
+    } else if (this.timer <= 800) {
+      result -= 1; // If timer is between 400 and 800, subtract 1 from the result.
+    }
+
+    // Calculate the result based on the counter value.
+    if (this.counter > 3) {
+      switch (this.counter) {
+        case 4:
+          result += 1;
+          break;
+        case 5:
+          result += 2;
+          break;
+        case 6:
+          result += 4;
+          break;
+        case 7:
+          result += 6;
+          break;
+        case 8:
+          result += 8;
+          break;
+        default:
+          result += 10; // For counters greater than 8, add 10 to the result.
+      }
+    }
+
+    return result; // Return the calculated final result.
+  }
+
+  // Method to calculate the star rating based on the final result.
+  calculateStars(finalResult) {
     const starMap = new Map([
       [-2, 6],
       [-1, 5],
@@ -27,72 +70,35 @@ class Result {
       [10, 1],
     ]);
 
-    const stars = starMap.get(finalResult) || 0;
-
-    // Display the result by opening a modal and showing stars
-    this.openModal(stars);
-
-    // Debugging logs (commented out)
-    // console.log(`result: ${finalResult}`);
-    // console.log(`stars: ${stars} ${stars === 1 ? 'star' : 'stars'}`);
+    return starMap.get(finalResult) || 0; // Get the star rating from the starMap or default to 0 stars.
   }
 
-  calculateFinalResult(result = 0) {
-    // Calculate the final result based on timer and counter values
-    if (this.timer <= 400) {
-      result -= 2;
-    } else if (this.timer <= 800 && this.timer > 400) {
-      result -= 1;
-    }
-
-    if (this.counter <= 3) {
-      return result;
-    }
-
-    // Adjust the result based on the counter value
-    switch (this.counter) {
-      case 4:
-        result += 1;
-        break;
-      case 5:
-        result += 2;
-        break;
-      case 6:
-        result += 4;
-        break;
-      case 7:
-        result += 6;
-        break;
-      case 8:
-        result += 8;
-        break;
-      default:
-        result += 10;
-    }
-
-    return result;
-  }
-
+  // Method to display stars in the modal element.
   openModal(stars) {
-    // Create stars based on the count and add them to the specified element
-    const starElement = document.createElement("i");
-    starElement.classList.add("fa-solid", "fa-star");
-    starElement.style.color = "#ede219"; // Set the color to #ede219
+    const starElement = this.createStarElement(true);      // Create a solid star element.
+    const emptyStarElement = this.createStarElement(false); // Create an empty star element.
 
-    const emptyStarElement = document.createElement("i");
-    emptyStarElement.classList.add("fa-light", "fa-star");
-    emptyStarElement.style.color = "#ede219"; // Set the color to #ede219
-
+    // Add solid stars to the element based on the star rating.
     for (let i = 0; i < stars; i++) {
       this.element.appendChild(starElement.cloneNode(true));
     }
 
-    // Fill the remaining star slots with empty stars
+    // Add empty stars to fill the remaining space up to 5 stars.
     for (let i = stars; i < 5; i++) {
       this.element.appendChild(emptyStarElement.cloneNode(true));
     }
   }
+
+  // Method to create a star element (solid or empty) with appropriate styling.
+  createStarElement(isSolid) {
+    const starElement = document.createElement("i"); // Create an <i> element for the star.
+    starElement.classList.add(isSolid ? "fa-solid" : "fa-regular", "fa-star"); // Add classes for styling.
+    starElement.style.color = "#ede219"; // Set the star color to yellow.
+
+    return starElement; // Return the created star element.
+  }
 }
+
 
 /**
  * return random tank from array
