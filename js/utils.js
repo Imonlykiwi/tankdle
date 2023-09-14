@@ -12,8 +12,13 @@
  * tankHP: number
  * }}
  */
+
 const getRandomTank = (tankArray) => {
-  return tankArray.at(Math.floor(Math.random() * tankArray.length));
+  if (tankArray.length === 0) {
+    throw new Error('Tank array is empty.');
+  }
+  const randomIndex = Math.floor(Math.random() * tankArray.length);
+  return tankArray.at(randomIndex);
 };
 
 /**
@@ -76,7 +81,7 @@ function romanToArabic(roman) {
     "VIII": 8,
     "IX": 9,
     "X": 10,
-    "default": 0,
+    default: 0,
   };
 
   return romanNumerals[roman] ?? romanNumerals.default;
