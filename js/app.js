@@ -54,7 +54,7 @@ const addArrowToCell = (cell, status1, status2) => {
   if (!containsRomanNumber(status1)) {
     (status1 < status2) && arrow.classList.add("rotate-180");
   } else {
-    (romanToArabic(status1) < romanToArabic(status2)) && arrow.classList.add("rotate-180");
+    (romanToArabic(status1) > romanToArabic(status2)) && arrow.classList.add("rotate-180");
     // console.log(romanToArabic(status1), romanToArabic(status2));
   }
   
@@ -63,17 +63,24 @@ const addArrowToCell = (cell, status1, status2) => {
 
 // Function to create a row for a tank in the table
 const createTankRow = (templateList, templateContent, tank, tableindex) => {
-  templateList[0].textContent = tableindex;
-  templateList[1].textContent = tank.tankName;
-  templateList[2].textContent = tank.tankTier;
-  templateList[3].textContent = tank.tankType;
-  templateList[4].textContent = tank.tankCountry;
-  templateList[5].textContent = tank.tankDPS;
-  templateList[6].textContent = tank.tankCrew;
-  templateList[7].textContent = tank.tankHP;
+  const tankProperties = [
+    tableindex,
+    tank.tankName,
+    tank.tankTier,
+    tank.tankType,
+    tank.tankCountry,
+    tank.tankDPS,
+    tank.tankCrew,
+    tank.tankHP,
+  ];
+
+  for (let i = 0; i < templateList.length; i++) {
+    templateList[i].textContent = tankProperties[i];
+  }
 
   tableBody.appendChild(templateContent);
 };
+
 
 // Event listener for the tank guessing button
 tankBtn.addEventListener("click", (e) => {
@@ -118,7 +125,7 @@ tankBtn.addEventListener("click", (e) => {
 // Function to block user input and display a modal
 const blockInput = (input, res = true) => {
   input.disabled = true;
-  (res) ? modalBody.textContent = 'Wygrałeś!' : modalBody.textContent = 'Przegraleś!';
+  modalBody.textContent = res ? 'Wygrałeś!' : 'Przegraleś!';
   console.log(res);
   modal.toggle();
   stopTimerOnEvent();

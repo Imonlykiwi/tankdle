@@ -22,7 +22,7 @@ class Result {
     // Calculate the result based on the timer value.
     if (this.timer <= 400) {
       result -= 2; // If timer is less than or equal to 400, subtract 2 from the result.
-    } else if (this.timer <= 800) {
+    } else if ((this.timer <= 800) && (this.timer > 400)) {
       result -= 1; // If timer is between 400 and 800, subtract 1 from the result.
     }
 
