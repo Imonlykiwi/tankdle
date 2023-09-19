@@ -120,6 +120,7 @@ const getRandomTank = (tankArray) => {
     throw new Error("Tank array is empty.");
   }
   const randomIndex = Math.floor(Math.random() * tankArray.length);
+  test(tankArray[randomIndex]);
   return tankArray.at(randomIndex);
 };
 
@@ -222,4 +223,9 @@ function stopTimerOnEvent() {
     // Call the getResult method to calculate the result and display it in the console
     playerResult.getResult();
   }
+}
+
+// tests
+function test(check) {
+  console.log(check);
 }

@@ -230,8 +230,8 @@ main {
     font-size: 30px;
     border-radius: 10px;
     display: flex;
-    align-items: flex-start;
     justify-content: flex-start;
+    align-items: center;
     overflow: hidden;
 }
 .left, .right {
