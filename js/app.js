@@ -126,7 +126,7 @@ tankBtn.addEventListener("click", (e) => {
 const blockInput = (input, res = true) => {
   input.disabled = true;
   modalBody.textContent = res ? 'Wygrałeś!' : 'Przegraleś!';
-  console.log(res);
+  // console.log(res);
   modal.toggle();
   stopTimerOnEvent();
 };
